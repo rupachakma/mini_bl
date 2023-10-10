@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div>
+    <div>
+        <h2 style="text-align: center;">Add Here...!!</h2>
+    </div>
+    <div>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_P }}
+            <input calss="btn btn-info" type="submit" value="Add">
+            <a class="btn btn-danger" href="{% url 'dashboardpage' %}">Cancel</a>
+        </form>
+    </div>
+</div>
+{% endblock content%}
